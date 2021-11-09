@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "44c7b03f-f366-46b7-9f1b-46e4b5057993",
+		"name": "Web Motors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API para recuperar marcas cadastradas na webmotors",
+			"item": [
+				{
+					"name": "GET Makes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(200);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Make",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Make"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API para recuperar modelos cadastradas na webmotors",
+			"item": [
+				{
+					"name": "GET Model",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(200);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Model?MakeID=2",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							],
+							"query": [
+								{
+									"key": "MakeID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Model Error - MAKEID = NULL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(400);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Model?MakeID=null",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							],
+							"query": [
+								{
+									"key": "MakeID",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API para recuperar versões cadastradas na webmotors",
+			"item": [
+				{
+					"name": "GET Version",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(200);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Version?ModelID=4",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "ModelID",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Version Error - MODELID = NULL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(400);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Version?ModelID=null",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "ModelID",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "GET Vehicles - Page 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(200);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=1",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Vehicles - Page 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(200);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=2",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Vehicles Error - Page = NULL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.response.to.have.status(400);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=null",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.27">
+    <testcase classname="Listar estoque de vendedor no siteWebmotors" name="Listar estoque de um vendedor a partir dos detalhes de um veiculo" time="5.131">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Dado pesquisar por "Honda" no filtro de Marcas..............................undefined
+E pesquisar por "City" no filtro de Modelos.................................skipped
+Quando abrir os detalhes do primeiro veiculo nos resultados de pesquisa.....skipped
+E clicar para ver todos os carros do vendedor...............................skipped
+Entao retornar para a tela de resultados de pesquisa somente com os carros do vendedor.skipped
+]]></failure>
+    </testcase>
+</testsuite>
